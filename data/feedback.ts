@@ -4,36 +4,64 @@ export type Feedback = {
   quote: string;
 };
 
-// Placeholder — será substituído pelos dados reais do CSV.
+// Dados extraídos do "Feedback do Piloto Invent Money — Trainers de IA".
+// Apenas primeiro nome é exibido (sem telefone/email), conforme o escopo
+// de consentimento coletado no formulário (uso interno para melhoria de produto).
 export const feedback: Feedback[] = [
   {
-    name: "Membro 1",
-    role: "Comunidade inicial",
-    quote: "Espaço reservado para o feedback real que virá do CSV.",
+    name: "Cauã",
+    role: "Trainer de IA",
+    quote:
+      "É uma plataforma bem estruturada e paga bem. Mesmo possuindo bugs que são normais para uma versão beta.",
   },
   {
-    name: "Membro 2",
-    role: "Comunidade inicial",
-    quote: "Este card mostra o layout — o conteúdo será atualizado.",
+    name: "Ana Maria",
+    role: "Trainer de IA",
+    quote:
+      "Gostei da liberdade de poder executar algumas tarefas, como cozinhar, por exemplo. O suporte de vocês foi incrível, nada a reclamar.",
   },
   {
-    name: "Membro 3",
-    role: "Comunidade inicial",
-    quote: "Cada linha do CSV vira um cartão como este na página.",
+    name: "Emily",
+    role: "Trainer de IA",
+    quote:
+      "A praticidade da plataforma e a flexibilidade para gravar vídeos de atividades do dia a dia no horário que fosse mais conveniente.",
   },
   {
-    name: "Membro 4",
-    role: "Comunidade inicial",
-    quote: "Placeholder para visualizar o grid de depoimentos.",
+    name: "Amanda",
+    role: "Trainer de IA",
+    quote:
+      "A possibilidade de gravar direto do celular e também da plataforma, os valores pagos e os bônus incentivam bastante a continuar.",
   },
   {
-    name: "Membro 5",
-    role: "Comunidade inicial",
-    quote: "Assim que você mandar o CSV, eu troco por texto real.",
+    name: "Natan",
+    role: "Trainer de IA",
+    quote: "Plataforma bem intuitiva, fácil de mexer.",
   },
   {
-    name: "Membro 6",
-    role: "Comunidade inicial",
-    quote: "Layout preparado para receber dezenas de depoimentos.",
+    name: "Fabrício",
+    role: "Trainer de IA",
+    quote: "Valores e bônus muito bons. Bom trabalho — que venham novas tarefas!",
+  },
+  {
+    name: "Bruno",
+    role: "Trainer de IA",
+    quote:
+      "Gostei da proposta do projeto e acredito que ele tem muito potencial. A remuneração também é um ponto positivo e me motivou a participar.",
+  },
+  {
+    name: "Eder",
+    role: "Trainer de IA",
+    quote:
+      "O projeto é muito legal e tem uma variedade de tarefas permitidas. Entendo estar em beta, e betas são sinônimos de erros e aprendizado.",
+  },
+  {
+    name: "Igor",
+    role: "Trainer de IA",
+    quote: "Pagamento em crypto — curti bastante essa parte do piloto.",
   },
 ];
+
+export const stats = {
+  averageRecommendation: 9.3,
+  respondents: 17,
+};

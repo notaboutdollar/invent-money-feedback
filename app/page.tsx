@@ -1,4 +1,4 @@
-import { feedback } from "@/data/feedback";
+import { feedback, stats } from "@/data/feedback";
 
 export default function Page() {
   return (
@@ -12,9 +12,24 @@ export default function Page() {
           está dizendo.
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-ink/70">
-          Feedbacks reais dos primeiros membros. Sem filtro, sem retoque —
-          direto de quem está construindo com a gente.
+          Feedbacks reais dos primeiros trainers do piloto. Sem filtro, sem
+          retoque — direto de quem está construindo com a gente.
         </p>
+
+        <div className="mt-10 flex flex-wrap gap-8">
+          <div>
+            <p className="text-3xl font-semibold text-ink md:text-4xl">
+              {stats.averageRecommendation}/10
+            </p>
+            <p className="text-sm text-ink/60">Recomendariam a oportunidade</p>
+          </div>
+          <div>
+            <p className="text-3xl font-semibold text-ink md:text-4xl">
+              {stats.respondents}
+            </p>
+            <p className="text-sm text-ink/60">Trainers no piloto</p>
+          </div>
+        </div>
       </header>
 
       <section
