@@ -101,6 +101,72 @@ export const feedback: Feedback[] = [
   },
 ];
 
+export type Improvement = {
+  name: string;
+  tag: "Upload" | "Validação" | "Regras" | "Bugs" | "Feedback";
+  quote: string;
+};
+
+// Feedbacks construtivos sobre a plataforma, agrupados por área de melhoria.
+// Extraídos das respostas de "frustração/dificuldade", "bug reportado" e
+// "recado direto pra Invent Money".
+export const improvements: Improvement[] = [
+  {
+    name: "Amanda",
+    tag: "Upload",
+    quote:
+      "Subir os vídeos demora muito pra carregar — dos 22 que gravei, apenas 5 subiram. Ao tentar subir mais do que 5, a plataforma travava.",
+  },
+  {
+    name: "Fernanda",
+    tag: "Upload",
+    quote:
+      "O upload via iPhone não funcionava. Tive que exportar pro Drive e baixar no computador pra conseguir subir. Isso tirou horas que eu poderia estar gravando.",
+  },
+  {
+    name: "Natan",
+    tag: "Bugs",
+    quote:
+      "Vídeos com mais de 10 minutos não faziam upload. E quando gravava direto pela plataforma, o vídeo acima de 10 min fechava sozinho, sem alerta — sumiram trabalhos.",
+  },
+  {
+    name: "Eder",
+    tag: "Upload",
+    quote:
+      "Ao subir vídeos, quase sempre o upload parava e voltava pra tela inicial, obrigando a começar do zero. E quando completava, o vídeo às vezes ficava como “enviando” infinito.",
+  },
+  {
+    name: "Bruno",
+    tag: "Validação",
+    quote:
+      "A maioria das rejeições foi por “baixa qualidade”, mas vídeos gravados exatamente do mesmo jeito foram aprovados, enquanto outros foram rejeitados pelo mesmo motivo. Ficou difícil entender o que corrigir.",
+  },
+  {
+    name: "Eder",
+    tag: "Validação",
+    quote:
+      "Tive vídeo reprovado por não ter áudio, e outro aprovado sem áudio. Os critérios pareciam inconsistentes entre vídeos com o mesmo contexto.",
+  },
+  {
+    name: "Cauã",
+    tag: "Feedback",
+    quote:
+      "Melhorem a plataforma deixando as análises mais rápidas e o feedback de cada vídeo mais específico.",
+  },
+  {
+    name: "Marcia",
+    tag: "Regras",
+    quote:
+      "Meus rejeitados foram todos por não aparecerem as duas mãos. Gravei tudo com a câmera em 1x porque não sabia disso — deveria ficar mais claro que precisa estar em 0.5x.",
+  },
+  {
+    name: "Amanda",
+    tag: "Bugs",
+    quote:
+      "Algumas vezes o site travava indicando que eu estava usando VPN, mesmo sem ter VPN no dispositivo. Precisei recarregar a página várias vezes pra normalizar.",
+  },
+];
+
 export const stats = {
   averageRecommendation: 9.4,
   averagePlatformExperience: 7.3,

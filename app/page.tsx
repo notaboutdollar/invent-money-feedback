@@ -1,10 +1,19 @@
 import {
   feedback,
+  improvements,
   platformExperienceScores,
   recommendationScores,
   stats,
 } from "@/data/feedback";
 import { ScoreChart } from "@/components/ScoreChart";
+
+const tagStyles: Record<string, string> = {
+  Upload: "bg-orange-50 text-orange-700 ring-orange-200",
+  Validação: "bg-amber-50 text-amber-700 ring-amber-200",
+  Regras: "bg-blue-50 text-blue-700 ring-blue-200",
+  Bugs: "bg-rose-50 text-rose-700 ring-rose-200",
+  Feedback: "bg-violet-50 text-violet-700 ring-violet-200",
+};
 
 export default function Page() {
   return (
@@ -71,29 +80,69 @@ export default function Page() {
         </div>
       </section>
 
-      <section
-        aria-label="Depoimentos da comunidade"
-        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-      >
-        {feedback.map((item, i) => (
-          <article
-            key={i}
-            className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md"
-          >
-            <p className="text-base leading-relaxed text-ink/90">
-              “{item.quote}”
-            </p>
-            <footer className="mt-6 border-t border-ink/10 pt-4">
-              <p className="font-medium text-ink">{item.name}</p>
-              {item.role && (
-                <p className="text-sm text-ink/60">{item.role}</p>
-              )}
-            </footer>
-          </article>
-        ))}
+      <section aria-label="Elogios da comunidade" className="mb-20 md:mb-28">
+        <h2 className="mb-3 text-2xl font-semibold tracking-tight md:text-3xl">
+          O que mais gostaram
+        </h2>
+        <p className="mb-8 max-w-2xl text-ink/70">
+          O que os trainers destacaram como pontos fortes do piloto.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {feedback.map((item, i) => (
+            <article
+              key={i}
+              className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md"
+            >
+              <p className="text-base leading-relaxed text-ink/90">
+                “{item.quote}”
+              </p>
+              <footer className="mt-6 border-t border-ink/10 pt-4">
+                <p className="font-medium text-ink">{item.name}</p>
+                {item.role && (
+                  <p className="text-sm text-ink/60">{item.role}</p>
+                )}
+              </footer>
+            </article>
+          ))}
+        </div>
       </section>
 
-      <footer className="mt-24 border-t border-ink/10 pt-8 text-sm text-ink/50">
+      <section aria-label="Pontos de melhoria" className="mb-20 md:mb-28">
+        <h2 className="mb-3 text-2xl font-semibold tracking-tight md:text-3xl">
+          O que precisa melhorar
+        </h2>
+        <p className="mb-8 max-w-2xl text-ink/70">
+          Frustrações e bugs relatados no piloto — a matéria-prima para a
+          próxima rodada da plataforma.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {improvements.map((item, i) => (
+            <article
+              key={i}
+              className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md"
+            >
+              <span
+                className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${
+                  tagStyles[item.tag] ?? "bg-ink/5 text-ink/70 ring-ink/10"
+                }`}
+              >
+                {item.tag}
+              </span>
+              <p className="mt-4 text-base leading-relaxed text-ink/90">
+                “{item.quote}”
+              </p>
+              <footer className="mt-6 border-t border-ink/10 pt-4">
+                <p className="font-medium text-ink">{item.name}</p>
+                <p className="text-sm text-ink/60">Trainer de IA</p>
+              </footer>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <footer className="mt-8 border-t border-ink/10 pt-8 text-sm text-ink/50">
         © {new Date().getFullYear()} Invent Money — Feedback da comunidade
       </footer>
     </main>
