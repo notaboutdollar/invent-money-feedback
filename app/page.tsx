@@ -1,4 +1,10 @@
-import { feedback, stats } from "@/data/feedback";
+import {
+  feedback,
+  platformExperienceScores,
+  recommendationScores,
+  stats,
+} from "@/data/feedback";
+import { ScoreChart } from "@/components/ScoreChart";
 
 export default function Page() {
   return (
@@ -33,10 +39,37 @@ export default function Page() {
             <p className="text-3xl font-semibold text-ink md:text-4xl">
               {stats.wouldContinuePercent}%
             </p>
-            <p className="text-sm text-ink/60">Querem continuar na próxima rodada</p>
+            <p className="text-sm text-ink/60">
+              Querem continuar na próxima rodada
+            </p>
           </div>
         </div>
       </header>
+
+      <section aria-label="Notas do piloto" className="mb-20 md:mb-28">
+        <h2 className="mb-3 text-2xl font-semibold tracking-tight md:text-3xl">
+          Como o piloto foi avaliado
+        </h2>
+        <p className="mb-8 max-w-2xl text-ink/70">
+          Duas leituras que contam a mesma história: a oportunidade convence,
+          mas a plataforma ainda tem fricção que vale endereçar.
+        </p>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <ScoreChart
+            title="Recomendaria a um amigo"
+            subtitle="0 = de jeito nenhum · 10 = com certeza"
+            counts={recommendationScores}
+            average={stats.averageRecommendation}
+          />
+          <ScoreChart
+            title="Experiência na plataforma"
+            subtitle="0 = péssima · 10 = excelente"
+            counts={platformExperienceScores}
+            average={stats.averagePlatformExperience}
+          />
+        </div>
+      </section>
 
       <section
         aria-label="Depoimentos da comunidade"
@@ -47,7 +80,9 @@ export default function Page() {
             key={i}
             className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md"
           >
-            <p className="text-base leading-relaxed text-ink/90">“{item.quote}”</p>
+            <p className="text-base leading-relaxed text-ink/90">
+              “{item.quote}”
+            </p>
             <footer className="mt-6 border-t border-ink/10 pt-4">
               <p className="font-medium text-ink">{item.name}</p>
               {item.role && (

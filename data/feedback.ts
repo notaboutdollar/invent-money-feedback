@@ -103,6 +103,11 @@ export const feedback: Feedback[] = [
 
 export const stats = {
   averageRecommendation: 9.4,
+  averagePlatformExperience: 7.3,
   respondents: 17,
   wouldContinuePercent: 100,
 };
+
+// Distribuição das notas 0..10 (índice = nota, valor = quantidade de respostas).
+export const recommendationScores = [0, 0, 0, 0, 0, 1, 0, 0, 2, 2, 12];
+export const platformExperienceScores = [0, 1, 0, 1, 1, 1, 2, 0, 5, 1, 5];
