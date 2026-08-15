@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         ink: "#0b0b0f",
         canvas: "#f7f6f2",
-        accent: "#16a34a",
+        accent: "#22c55e",
       },
       fontFamily: {
         sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Inter", "sans-serif"],

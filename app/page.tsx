@@ -17,7 +17,7 @@ const tagStyles: Record<string, string> = {
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <main className="mx-auto max-w-6xl px-6 py-16 text-center md:py-24">
       <header className="mb-16 md:mb-24">
         <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
           Invent Money
@@ -26,12 +26,12 @@ export default function Page() {
           O que a comunidade inicial <br className="hidden md:block" />
           está dizendo.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-ink/70">
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-ink/70">
           Feedbacks reais dos primeiros trainers do piloto. Sem filtro, sem
           retoque — direto de quem está construindo com a gente.
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-10">
+        <div className="mt-10 flex flex-wrap justify-center gap-10">
           <div>
             <p className="text-3xl font-semibold text-ink md:text-4xl">
               {stats.averageRecommendation}/10
@@ -59,7 +59,7 @@ export default function Page() {
         <h2 className="mb-3 text-2xl font-semibold tracking-tight md:text-3xl">
           Como o piloto foi avaliado
         </h2>
-        <p className="mb-8 max-w-2xl text-ink/70">
+        <p className="mx-auto mb-8 max-w-2xl text-ink/70">
           Duas leituras que contam a mesma história: a oportunidade convence,
           mas a plataforma ainda tem fricção que vale endereçar.
         </p>
@@ -84,7 +84,7 @@ export default function Page() {
         <h2 className="mb-3 text-2xl font-semibold tracking-tight md:text-3xl">
           O que mais gostaram
         </h2>
-        <p className="mb-8 max-w-2xl text-ink/70">
+        <p className="mx-auto mb-8 max-w-2xl text-ink/70">
           O que os trainers destacaram como pontos fortes do piloto.
         </p>
 
@@ -112,7 +112,7 @@ export default function Page() {
         <h2 className="mb-3 text-2xl font-semibold tracking-tight md:text-3xl">
           O que precisa melhorar
         </h2>
-        <p className="mb-8 max-w-2xl text-ink/70">
+        <p className="mx-auto mb-8 max-w-2xl text-ink/70">
           Frustrações e bugs relatados no piloto — a matéria-prima para a
           próxima rodada da plataforma.
         </p>
@@ -121,7 +121,7 @@ export default function Page() {
           {improvements.map((item, i) => (
             <article
               key={i}
-              className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md"
+              className="flex flex-col items-center rounded-2xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
               <span
                 className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${
@@ -133,7 +133,7 @@ export default function Page() {
               <p className="mt-4 text-base leading-relaxed text-ink/90">
                 “{item.quote}”
               </p>
-              <footer className="mt-6 border-t border-ink/10 pt-4">
+              <footer className="mt-6 w-full border-t border-ink/10 pt-4">
                 <p className="font-medium text-ink">{item.name}</p>
                 <p className="text-sm text-ink/60">Trainer de IA</p>
               </footer>

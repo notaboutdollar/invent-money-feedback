@@ -32,27 +32,40 @@ export function ScoreChart({
         </div>
       </div>
 
-      <div className="flex h-64 items-stretch gap-2">
+      <div className="flex h-64 items-end gap-2 pt-6">
         {counts.map((count, i) => {
           const pct = total ? Math.round((count / total) * 100) : 0;
           const heightPct = (count / max) * 100;
           const highlighted = i >= accentFrom && count > 0;
           return (
-            <div key={i} className="flex flex-1 flex-col items-center gap-1">
-              <span className="h-4 text-[11px] font-semibold text-ink/70">
-                {count > 0 ? `${pct}%` : ""}
-              </span>
-              <div className="flex w-full flex-1 items-end">
+            <div key={i} className="group relative flex h-full flex-1 items-end">
+              <div
+                className="relative w-full"
+                style={{
+                  height: `${heightPct}%`,
+                  minHeight: count > 0 ? "6px" : "0px",
+                }}
+              >
+                {count > 0 && (
+                  <span className="absolute -top-5 left-0 right-0 text-center text-[11px] font-semibold text-ink/70">
+                    {pct}%
+                  </span>
+                )}
                 <div
-                  className={`w-full rounded-t transition-colors ${
+                  className={`h-full w-full rounded-t transition-colors ${
                     highlighted ? "bg-accent" : "bg-ink/15"
                   }`}
-                  style={{
-                    height: `${heightPct}%`,
-                    minHeight: count > 0 ? "6px" : "0px",
-                  }}
                   aria-label={`Nota ${i}: ${count} ${count === 1 ? "resposta" : "respostas"}`}
                 />
+                {count > 0 && (
+                  <div
+                    role="tooltip"
+                    className="pointer-events-none absolute -top-12 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2.5 py-1 text-xs font-medium text-canvas opacity-0 shadow-md transition-opacity group-hover:opacity-100"
+                  >
+                    {count} {count === 1 ? "pessoa votou" : "pessoas votaram"}{" "}
+                    nota {i}
+                  </div>
+                )}
               </div>
             </div>
           );
@@ -61,10 +74,7 @@ export function ScoreChart({
 
       <div className="mt-2 flex gap-2">
         {counts.map((_, i) => (
-          <div
-            key={i}
-            className="flex-1 text-center text-[11px] text-ink/50"
-          >
+          <div key={i} className="flex-1 text-center text-[11px] text-ink/50">
             {i}
           </div>
         ))}
