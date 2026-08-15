@@ -32,24 +32,24 @@ export function ScoreChart({
         </div>
       </div>
 
-      <div className="flex h-40 items-end gap-2">
+      <div className="flex h-64 items-stretch gap-2">
         {counts.map((count, i) => {
           const pct = total ? Math.round((count / total) * 100) : 0;
           const heightPct = (count / max) * 100;
           const highlighted = i >= accentFrom && count > 0;
           return (
             <div key={i} className="flex flex-1 flex-col items-center gap-1">
-              <span className="h-4 text-[10px] font-medium text-ink/60">
+              <span className="h-4 text-[11px] font-semibold text-ink/70">
                 {count > 0 ? `${pct}%` : ""}
               </span>
-              <div className="flex h-full w-full items-end">
+              <div className="flex w-full flex-1 items-end">
                 <div
                   className={`w-full rounded-t transition-colors ${
                     highlighted ? "bg-accent" : "bg-ink/15"
                   }`}
                   style={{
                     height: `${heightPct}%`,
-                    minHeight: count > 0 ? "4px" : "0px",
+                    minHeight: count > 0 ? "6px" : "0px",
                   }}
                   aria-label={`Nota ${i}: ${count} ${count === 1 ? "resposta" : "respostas"}`}
                 />
