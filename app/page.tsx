@@ -16,18 +16,24 @@ export default function Page() {
           retoque — direto de quem está construindo com a gente.
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-8">
+        <div className="mt-10 flex flex-wrap gap-10">
           <div>
             <p className="text-3xl font-semibold text-ink md:text-4xl">
               {stats.averageRecommendation}/10
             </p>
-            <p className="text-sm text-ink/60">Recomendariam a oportunidade</p>
+            <p className="text-sm text-ink/60">Nota média de recomendação</p>
           </div>
           <div>
             <p className="text-3xl font-semibold text-ink md:text-4xl">
               {stats.respondents}
             </p>
             <p className="text-sm text-ink/60">Trainers no piloto</p>
+          </div>
+          <div>
+            <p className="text-3xl font-semibold text-ink md:text-4xl">
+              {stats.wouldContinuePercent}%
+            </p>
+            <p className="text-sm text-ink/60">Querem continuar na próxima rodada</p>
           </div>
         </div>
       </header>
