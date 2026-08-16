@@ -70,8 +70,7 @@ export default function Page() {
             está dizendo.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink/70">
-            Feedbacks reais dos primeiros trainers do piloto. Sem filtro, sem
-            retoque — direto de quem está construindo com a gente.
+            Feedbacks dos primeiros trainers do piloto.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-x-12 gap-y-6">
@@ -151,12 +150,12 @@ export default function Page() {
             {feedback.map((item, i) => (
               <article
                 key={i}
-                className="rounded-2xl border border-ink/10 bg-white p-6 text-left shadow-sm transition hover:shadow-md"
+                className="flex flex-col rounded-2xl border border-ink/10 bg-white p-6 text-left shadow-sm transition hover:shadow-md"
               >
                 <p className="text-base leading-relaxed text-ink/90">
                   “{item.quote}”
                 </p>
-                <footer className="mt-6 border-t border-ink/10 pt-4">
+                <footer className="mt-6 border-t border-ink/10 pt-4 md:mt-auto md:pt-4">
                   <p className="font-medium text-ink">{item.name}</p>
                   {item.role && (
                     <p className="text-sm text-ink/60">{item.role}</p>
@@ -185,7 +184,7 @@ export default function Page() {
             {improvements.map((item, i) => (
               <article
                 key={i}
-                className="rounded-2xl border border-ink/10 bg-white p-6 text-left shadow-sm transition hover:shadow-md"
+                className="flex flex-col items-start rounded-2xl border border-ink/10 bg-white p-6 text-left shadow-sm transition hover:shadow-md"
               >
                 <span
                   className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${
@@ -197,7 +196,7 @@ export default function Page() {
                 <p className="mt-4 text-base leading-relaxed text-ink/90">
                   “{item.quote}”
                 </p>
-                <footer className="mt-6 border-t border-ink/10 pt-4">
+                <footer className="mt-6 w-full border-t border-ink/10 pt-4 md:mt-auto">
                   <p className="font-medium text-ink">{item.name}</p>
                   <p className="text-sm text-ink/60">Trainer de IA</p>
                 </footer>
