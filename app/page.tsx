@@ -9,26 +9,16 @@ import { ScoreChart } from "@/components/ScoreChart";
 
 const tagStyles: Record<string, string> = {
   Upload: "bg-orange-50 text-orange-700 ring-orange-200",
-  Validação: "bg-amber-50 text-amber-700 ring-amber-200",
-  Regras: "bg-blue-50 text-blue-700 ring-blue-200",
+  Validation: "bg-amber-50 text-amber-700 ring-amber-200",
+  Rules: "bg-blue-50 text-blue-700 ring-blue-200",
   Bugs: "bg-rose-50 text-rose-700 ring-rose-200",
   Feedback: "bg-violet-50 text-violet-700 ring-violet-200",
 };
 
-function SectionLabel({
-  number,
-  name,
-  meta,
-}: {
-  number: string;
-  name: string;
-  meta?: string;
-}) {
+function SectionLabel({ name, meta }: { name: string; meta?: string }) {
   return (
     <p className="mb-5 text-sm font-medium uppercase tracking-[0.15em]">
-      <span className="text-accent">{number}</span>
-      <span className="mx-2 text-ink/25">·</span>
-      <span className="text-ink/70">{name}</span>
+      <span className="text-accent">{name}</span>
       {meta && (
         <>
           <span className="mx-2 text-ink/25">·</span>
@@ -60,17 +50,13 @@ export default function Page() {
 
       <main className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <section className="mb-20 md:mb-28">
-          <SectionLabel
-            number="00"
-            name="Invent Money"
-            meta="Piloto AI Trainers"
-          />
+          <SectionLabel name="Invent Money" meta="AI Trainers Pilot" />
           <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-            O que a comunidade inicial <br className="hidden md:block" />
-            está dizendo.
+            What the initial community <br className="hidden md:block" />
+            is saying.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink/70">
-            Feedbacks dos primeiros trainers do piloto.
+            Feedback from the first pilot trainers.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-x-12 gap-y-6">
@@ -78,72 +64,64 @@ export default function Page() {
               <p className="text-3xl font-semibold text-ink md:text-4xl">
                 {stats.averageRecommendation}/10
               </p>
-              <p className="text-sm text-ink/60">Nota média de recomendação</p>
+              <p className="text-sm text-ink/60">Average recommendation score</p>
             </div>
             <div>
               <p className="text-3xl font-semibold text-ink md:text-4xl">
                 {stats.averagePlatformExperience}/10
               </p>
-              <p className="text-sm text-ink/60">Nota da plataforma</p>
+              <p className="text-sm text-ink/60">Platform score</p>
             </div>
             <div>
               <p className="text-3xl font-semibold text-ink md:text-4xl">
                 {stats.respondents}
               </p>
-              <p className="text-sm text-ink/60">Trainers no piloto</p>
+              <p className="text-sm text-ink/60">Trainers in the pilot</p>
             </div>
             <div>
               <p className="text-3xl font-semibold text-ink md:text-4xl">
                 {stats.wouldContinuePercent}%
               </p>
               <p className="text-sm text-ink/60">
-                Querem continuar na próxima rodada
+                Want to continue in the next round
               </p>
             </div>
           </div>
         </section>
 
-        <section aria-label="Notas do piloto" className="mb-20 md:mb-28">
-          <SectionLabel
-            number="01"
-            name="Avaliação"
-            meta="17 Respostas"
-          />
+        <section aria-label="Pilot ratings" className="mb-20 md:mb-28">
+          <SectionLabel name="Ratings" meta="17 Responses" />
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Como o piloto foi avaliado.
+            How the pilot was rated.
           </h2>
           <p className="mt-4 mb-10 max-w-2xl text-ink/70">
-            Duas leituras que contam a mesma história: a oportunidade convence,
-            mas a plataforma ainda tem fricção que vale endereçar.
+            Two readings that tell the same story: the opportunity is
+            compelling, but the platform still has friction worth addressing.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
             <ScoreChart
-              title="Recomendaria a um amigo"
-              subtitle="0 = de jeito nenhum · 10 = com certeza"
+              title="Would recommend to a friend"
+              subtitle="0 = definitely not · 10 = definitely yes"
               counts={recommendationScores}
               average={stats.averageRecommendation}
             />
             <ScoreChart
-              title="Experiência na plataforma"
-              subtitle="0 = péssima · 10 = excelente"
+              title="Platform experience"
+              subtitle="0 = terrible · 10 = excellent"
               counts={platformExperienceScores}
               average={stats.averagePlatformExperience}
             />
           </div>
         </section>
 
-        <section aria-label="Elogios da comunidade" className="mb-20 md:mb-28">
-          <SectionLabel
-            number="02"
-            name="Elogios"
-            meta="O que funcionou"
-          />
+        <section aria-label="Community highlights" className="mb-20 md:mb-28">
+          <SectionLabel name="Highlights" meta="What worked" />
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            O que mais gostaram.
+            What they liked most.
           </h2>
           <p className="mt-4 mb-10 max-w-2xl text-ink/70">
-            O que os trainers destacaram como pontos fortes do piloto.
+            What trainers highlighted as strengths of the pilot.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -166,18 +144,14 @@ export default function Page() {
           </div>
         </section>
 
-        <section aria-label="Pontos de melhoria" className="mb-20 md:mb-28">
-          <SectionLabel
-            number="03"
-            name="Melhorias"
-            meta="9 Relatos"
-          />
+        <section aria-label="Improvement points" className="mb-20 md:mb-28">
+          <SectionLabel name="Improvements" meta="9 Reports" />
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            O que precisa melhorar.
+            What needs to improve.
           </h2>
           <p className="mt-4 mb-10 max-w-2xl text-ink/70">
-            Frustrações e bugs relatados no piloto — a matéria-prima para a
-            próxima rodada da plataforma.
+            Frustrations and bugs reported in the pilot — the raw material for
+            the platform's next round.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -198,7 +172,7 @@ export default function Page() {
                 </p>
                 <footer className="mt-6 w-full border-t border-ink/10 pt-4 md:mt-auto">
                   <p className="font-medium text-ink">{item.name}</p>
-                  <p className="text-sm text-ink/60">Trainer de IA</p>
+                  <p className="text-sm text-ink/60">AI Trainer</p>
                 </footer>
               </article>
             ))}
@@ -206,7 +180,7 @@ export default function Page() {
         </section>
 
         <footer className="mt-8 border-t border-ink/10 pt-8 text-sm text-ink/50">
-          © {new Date().getFullYear()} Invent Money — Feedback da comunidade
+          © {new Date().getFullYear()} Invent Money — Community feedback
         </footer>
       </main>
     </>

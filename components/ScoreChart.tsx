@@ -28,7 +28,7 @@ export function ScoreChart({
             {average.toFixed(1)}
             <span className="text-base font-normal text-ink/50">/10</span>
           </p>
-          <p className="text-xs text-ink/50">média de {total} respostas</p>
+          <p className="text-xs text-ink/50">avg of {total} responses</p>
         </div>
       </div>
 
@@ -55,15 +55,15 @@ export function ScoreChart({
                   className={`h-full w-full rounded-t transition-colors ${
                     highlighted ? "bg-accent" : "bg-ink/15"
                   }`}
-                  aria-label={`Nota ${i}: ${count} ${count === 1 ? "resposta" : "respostas"}`}
+                  aria-label={`Rating ${i}: ${count} ${count === 1 ? "response" : "responses"}`}
                 />
                 {count > 0 && (
                   <div
                     role="tooltip"
                     className="pointer-events-none absolute -top-12 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2.5 py-1 text-xs font-medium text-canvas opacity-0 shadow-md transition-opacity group-hover:opacity-100"
                   >
-                    {count} {count === 1 ? "pessoa votou" : "pessoas votaram"}{" "}
-                    nota {i}
+                    {count} {count === 1 ? "person rated" : "people rated"}{" "}
+                    {i}
                   </div>
                 )}
               </div>

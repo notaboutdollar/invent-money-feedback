@@ -4,166 +4,167 @@ export type Feedback = {
   quote: string;
 };
 
-// Dados extraídos do "Feedback do Piloto Invent Money — Trainers de IA".
-// Apenas primeiro nome é exibido (sem telefone/email), conforme o escopo
-// de consentimento coletado no formulário (uso interno para melhoria de produto).
+// Data extracted from "Feedback do Piloto Invent Money — Trainers de IA".
+// Only first names are displayed (no phone/email), per the consent scope
+// collected in the form (internal use for product improvement).
 export const feedback: Feedback[] = [
   {
     name: "Stephany",
-    role: "Trainer de IA",
-    quote: "Os bônus são muito bons!",
+    role: "AI Trainer",
+    quote: "The bonuses are really great!",
   },
   {
     name: "Lucas",
-    role: "Trainer de IA",
-    quote: "A facilidade das tarefas — só peço que continuem o projeto.",
+    role: "AI Trainer",
+    quote: "The tasks are easy — I just ask that you keep the project going.",
   },
   {
     name: "Luiz",
-    role: "Trainer de IA",
-    quote: "Ótimo valor, boa variedade de tasks e muito bônus.",
+    role: "AI Trainer",
+    quote: "Great pay, good variety of tasks, and lots of bonuses.",
   },
   {
     name: "Fernanda",
-    role: "Trainer de IA",
-    quote: "Gostei de poder gravar direto na câmera e depois fazer o upload.",
+    role: "AI Trainer",
+    quote:
+      "I liked being able to record straight from the camera and then upload.",
   },
   {
     name: "Italo",
-    role: "Trainer de IA",
-    quote: "Facilidade das tarefas.",
+    role: "AI Trainer",
+    quote: "The tasks are easy.",
   },
   {
     name: "Cauã",
-    role: "Trainer de IA",
+    role: "AI Trainer",
     quote:
-      "É uma plataforma bem estruturada e paga bem. Mesmo possuindo bugs que são normais para uma versão beta.",
+      "It's a well-structured platform that pays well — even with bugs that are normal for a beta version.",
   },
   {
     name: "Amanda",
-    role: "Trainer de IA",
+    role: "AI Trainer",
     quote:
-      "A possibilidade de gravar direto do celular e também da plataforma, os valores pagos e os bônus incentivam bastante a continuar.",
+      "Being able to record straight from the phone and also from the platform, the pay and the bonuses really motivate me to keep going.",
   },
   {
     name: "Ana Maria",
-    role: "Trainer de IA",
+    role: "AI Trainer",
     quote:
-      "Gostei da liberdade de poder executar algumas tarefas, como cozinhar, por exemplo. O suporte de vocês foi incrível, nada a reclamar.",
+      "I loved the freedom to do certain tasks, like cooking, for example. Your support was amazing — nothing to complain about.",
   },
   {
     name: "Emily",
-    role: "Trainer de IA",
+    role: "AI Trainer",
     quote:
-      "A praticidade da plataforma e a flexibilidade para gravar vídeos de atividades do dia a dia no horário que fosse mais conveniente.",
+      "The practicality of the platform and the flexibility to record videos of everyday activities whenever it was most convenient.",
   },
   {
     name: "Eder",
-    role: "Trainer de IA",
+    role: "AI Trainer",
     quote:
-      "O projeto é muito legal e tem uma variedade de tarefas permitidas. Entendo estar em beta, e betas são sinônimos de erros e aprendizado.",
+      "The project is really cool and has a good variety of allowed tasks. I get that it's in beta, and betas mean bugs and learning.",
   },
   {
     name: "Natan",
-    role: "Trainer de IA",
-    quote: "Plataforma bem intuitiva, fácil de mexer.",
+    role: "AI Trainer",
+    quote: "The platform is very intuitive, easy to use.",
   },
   {
     name: "Fabrício",
-    role: "Trainer de IA",
-    quote: "Valores e bônus muito bons. Bom trabalho — que venham novas tarefas!",
+    role: "AI Trainer",
+    quote: "Great pay and bonuses. Good work — bring on the new tasks!",
   },
   {
     name: "Marcia",
-    role: "Trainer de IA",
-    quote: "O valor pago pela hora de vídeos foi um ótimo incentivo.",
+    role: "AI Trainer",
+    quote: "The hourly pay for videos was a great incentive.",
   },
   {
     name: "Bruno",
-    role: "Trainer de IA",
+    role: "AI Trainer",
     quote:
-      "Gostei da proposta do projeto e da oportunidade de contribuir para o treinamento de modelos de IA. A plataforma é simples de usar e o fluxo de gravação é intuitivo.",
+      "I liked the project's proposal and the opportunity to help train AI models. The platform is simple to use and the recording flow is intuitive.",
   },
   {
     name: "Allan",
-    role: "Trainer de IA",
-    quote: "Gostei do site.",
+    role: "AI Trainer",
+    quote: "I liked the site.",
   },
   {
     name: "Pedro",
-    role: "Trainer de IA",
-    quote: "A praticidade.",
+    role: "AI Trainer",
+    quote: "The practicality.",
   },
   {
     name: "Igor",
-    role: "Trainer de IA",
-    quote: "Pagamento em crypto — curti bastante essa parte do piloto.",
+    role: "AI Trainer",
+    quote: "Payment in crypto — I really enjoyed that part of the pilot.",
   },
 ];
 
 export type Improvement = {
   name: string;
-  tag: "Upload" | "Validação" | "Regras" | "Bugs" | "Feedback";
+  tag: "Upload" | "Validation" | "Rules" | "Bugs" | "Feedback";
   quote: string;
 };
 
-// Feedbacks construtivos sobre a plataforma, agrupados por área de melhoria.
-// Extraídos das respostas de "frustração/dificuldade", "bug reportado" e
-// "recado direto pra Invent Money".
+// Constructive feedback about the platform, grouped by area of improvement.
+// Extracted from the "frustration/difficulty", "bug reported", and
+// "direct message to Invent Money" fields of the survey.
 export const improvements: Improvement[] = [
   {
     name: "Amanda",
     tag: "Upload",
     quote:
-      "Subir os vídeos demora muito pra carregar — dos 22 que gravei, apenas 5 subiram. Ao tentar subir mais do que 5, a plataforma travava.",
+      "Uploading videos takes way too long — out of the 22 I recorded, only 5 went through. Trying to upload more than 5 made the platform freeze.",
   },
   {
     name: "Fernanda",
     tag: "Upload",
     quote:
-      "O upload via iPhone não funcionava. Tive que exportar pro Drive e baixar no computador pra conseguir subir. Isso tirou horas que eu poderia estar gravando.",
+      "Uploading via iPhone didn't work. I had to export to Drive and download on the computer to get it uploaded. That cost me hours I could have been recording.",
   },
   {
     name: "Natan",
     tag: "Bugs",
     quote:
-      "Vídeos com mais de 10 minutos não faziam upload. E quando gravava direto pela plataforma, o vídeo acima de 10 min fechava sozinho, sem alerta — sumiram trabalhos.",
+      "Videos longer than 10 minutes wouldn't upload. And when recording straight in the platform, videos over 10 min closed on their own with no warning — I lost work.",
   },
   {
     name: "Eder",
     tag: "Upload",
     quote:
-      "Ao subir vídeos, quase sempre o upload parava e voltava pra tela inicial, obrigando a começar do zero. E quando completava, o vídeo às vezes ficava como “enviando” infinito.",
+      "Almost every time I uploaded, it would stop and bounce back to the start screen, forcing me to begin from scratch. And when it did complete, the video sometimes stayed as “sending” forever.",
   },
   {
     name: "Bruno",
-    tag: "Validação",
+    tag: "Validation",
     quote:
-      "A maioria das rejeições foi por “baixa qualidade”, mas vídeos gravados exatamente do mesmo jeito foram aprovados, enquanto outros foram rejeitados pelo mesmo motivo. Ficou difícil entender o que corrigir.",
+      "Most rejections were for “low quality”, but videos recorded the exact same way were approved, while others were rejected for the same reason. It was hard to understand what to fix.",
   },
   {
     name: "Eder",
-    tag: "Validação",
+    tag: "Validation",
     quote:
-      "Tive vídeo reprovado por não ter áudio, e outro aprovado sem áudio. Os critérios pareciam inconsistentes entre vídeos com o mesmo contexto.",
+      "I had a video rejected for missing audio, and another approved without audio. The criteria felt inconsistent between videos in the same context.",
   },
   {
     name: "Cauã",
     tag: "Feedback",
     quote:
-      "Melhorem a plataforma deixando as análises mais rápidas e o feedback de cada vídeo mais específico.",
+      "Improve the platform by making reviews faster and the feedback on each video more specific.",
   },
   {
     name: "Marcia",
-    tag: "Regras",
+    tag: "Rules",
     quote:
-      "Meus rejeitados foram todos por não aparecerem as duas mãos. Gravei tudo com a câmera em 1x porque não sabia disso — deveria ficar mais claro que precisa estar em 0.5x.",
+      "My rejected videos were all because both hands weren't showing. I recorded everything with the camera at 1x because I didn't know — it should be clearer that it needs to be at 0.5x.",
   },
   {
     name: "Amanda",
     tag: "Bugs",
     quote:
-      "Algumas vezes o site travava indicando que eu estava usando VPN, mesmo sem ter VPN no dispositivo. Precisei recarregar a página várias vezes pra normalizar.",
+      "Sometimes the site would freeze saying I was using a VPN, even though I didn't have a VPN on my device. I had to reload the page several times to get it working again.",
   },
 ];
 
@@ -174,6 +175,6 @@ export const stats = {
   wouldContinuePercent: 100,
 };
 
-// Distribuição das notas 0..10 (índice = nota, valor = quantidade de respostas).
+// Distribution of scores 0..10 (index = score, value = number of responses).
 export const recommendationScores = [0, 0, 0, 0, 0, 1, 0, 0, 2, 2, 12];
 export const platformExperienceScores = [0, 1, 0, 1, 1, 1, 2, 0, 5, 1, 5];
