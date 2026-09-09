@@ -516,7 +516,7 @@ const REPORT_CSS = `
   --leading: 28px;
   --half: 14px;
   --edge: clamp(20px, 5vw, 72px);
-  --measure: 62ch;
+  --measure: 88ch;
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-archivo), system-ui, sans-serif;
@@ -630,7 +630,7 @@ const REPORT_CSS = `
 .report-page .display .line { display: block; }
 .report-page .display .accent { color: var(--color-accent); }
 .report-page .hero .sub {
-  font-size: 17px; line-height: 1.6; max-width: var(--measure);
+  font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; max-width: var(--measure);
   margin: calc(1.5 * var(--leading)) 0 0;
   color: color-mix(in srgb, var(--color-text) 82%, transparent);
 }
@@ -785,5 +785,5 @@ const REPORT_CSS = `
 .report-page .close-band .brand-line { color: var(--color-bg); }
 .report-page .close-band .brand-line .sep { background: var(--color-bg); }
 .report-page .close-band .brand-line .label { color: color-mix(in srgb, #f3f2f2 75%, transparent); }
-.report-page .close-band p { font-size: 17px; line-height: 1.6; max-width: 62ch; margin: calc(1.5 * var(--leading)) 0 0; color: var(--color-bg); }
+.report-page .close-band p { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; max-width: 88ch; margin: calc(1.5 * var(--leading)) 0 0; color: var(--color-bg); }
 `;
