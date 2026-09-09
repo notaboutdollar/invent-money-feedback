@@ -282,13 +282,19 @@ export default function Page() {
               {t.brand.period}
             </p>
 
-            <p className="toc-sec">{t.toc.panoramaSection}</p>
+            <p className="toc-sec">{t.toc.overviewSection}</p>
             <a href="#panorama">
               <span className="n">00</span>
-              <span>{t.toc.panoramaItem}</span>
+              <span>{t.toc.overviewItem}</span>
             </a>
 
-            <p className="toc-sec">{t.toc.questionsSection}</p>
+            <p className="toc-sec">{t.toc.summarySection}</p>
+            <a href="#destaques">
+              <span className="n">→</span>
+              <span>{t.toc.summaryItem}</span>
+            </a>
+
+            <p className="toc-sec">{t.toc.detailsSection}</p>
             {t.toc.questions.map((q) => (
               <a href={`#q${q.num}`} key={q.num}>
                 <span className="n">{q.num}</span>
@@ -296,13 +302,11 @@ export default function Page() {
               </a>
             ))}
 
-            <p className="toc-sec">{t.toc.synthesisSection}</p>
-            {t.toc.synthesisItems.map((s, i) => (
-              <a href={i === 0 ? "#destaques" : "#fechamento"} key={i}>
-                <span className="n">{s.icon}</span>
-                <span>{s.label}</span>
-              </a>
-            ))}
+            <p className="toc-sec">{t.toc.closingSection}</p>
+            <a href="#fechamento">
+              <span className="n">→</span>
+              <span>{t.toc.closingItem}</span>
+            </a>
 
             <p className="toc-sec">{t.toc.olderSection}</p>
             <Link href="/report/set-2026-piloto-inicial" className="toc-link-older">
@@ -394,16 +398,7 @@ export default function Page() {
               </div>
             </section>
 
-            <BarQuestion q={q1} />
-            <BarQuestion q={q2} />
-            <ThemeQuestion q={q3} />
-            <BarQuestion q={q4} />
-            <BarQuestion q={q5} />
-            <RatingQuestion q={q6} />
-            <RatingQuestion q={q7} />
-            <SummaryQuestion q={t.q8} />
-
-            <section id="destaques">
+            <section id="destaques" className="zebra">
               <div className="wrap">
                 <div className="q-head">
                   <p className="q-num">{t.highlights.num}</p>
@@ -455,6 +450,15 @@ export default function Page() {
                 </div>
               </div>
             </section>
+
+            <BarQuestion q={q1} />
+            <BarQuestion q={q2} />
+            <ThemeQuestion q={q3} />
+            <BarQuestion q={q4} />
+            <BarQuestion q={q5} />
+            <RatingQuestion q={q6} />
+            <RatingQuestion q={q7} />
+            <SummaryQuestion q={t.q8} />
 
             <section id="fechamento" className="close-band">
               <div className="wrap">

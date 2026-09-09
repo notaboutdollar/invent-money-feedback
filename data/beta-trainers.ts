@@ -79,12 +79,14 @@ export type Content = {
   docDescription: string;
   brand: { name: string; role: string; period: string };
   toc: {
-    panoramaSection: string;
-    panoramaItem: string;
-    questionsSection: string;
+    overviewSection: string;
+    overviewItem: string;
+    summarySection: string;
+    summaryItem: string;
+    detailsSection: string;
     questions: { num: string; label: string }[];
-    synthesisSection: string;
-    synthesisItems: { icon: string; label: string }[];
+    closingSection: string;
+    closingItem: string;
     olderSection: string;
     olderLink: string;
   };
@@ -152,9 +154,11 @@ const en: Content = {
     period: "Trainer report\n09/04–09/07/2026",
   },
   toc: {
-    panoramaSection: "Overview",
-    panoramaItem: "Key indicators",
-    questionsSection: "Questions",
+    overviewSection: "Overview",
+    overviewItem: "Key indicators",
+    summarySection: "Summary",
+    summaryItem: "Highlights",
+    detailsSection: "Details",
     questions: [
       { num: "01", label: "Device" },
       { num: "02", label: "Bug screen" },
@@ -165,11 +169,8 @@ const en: Content = {
       { num: "07", label: "Recommendation (1–5)" },
       { num: "08", label: "Open suggestions" },
     ],
-    synthesisSection: "Synthesis",
-    synthesisItems: [
-      { icon: "→", label: "Highlights" },
-      { icon: "→", label: "Closing" },
-    ],
+    closingSection: "Closing",
+    closingItem: "Overall reading",
     olderSection: "Previous reports",
     olderLink: "Initial pilot",
   },
@@ -560,9 +561,11 @@ const pt: Content = {
     period: "Report de trainers\n04-07/09/2026",
   },
   toc: {
-    panoramaSection: "Panorama",
-    panoramaItem: "Indicadores-chave",
-    questionsSection: "Perguntas",
+    overviewSection: "Panorama",
+    overviewItem: "Indicadores-chave",
+    summarySection: "Resumo",
+    summaryItem: "Destaques",
+    detailsSection: "Detalhes",
     questions: [
       { num: "01", label: "Aparelho" },
       { num: "02", label: "Tela do bug" },
@@ -573,11 +576,8 @@ const pt: Content = {
       { num: "07", label: "Recomendação (1-5)" },
       { num: "08", label: "Sugestões abertas" },
     ],
-    synthesisSection: "Síntese",
-    synthesisItems: [
-      { icon: "→", label: "Destaques" },
-      { icon: "→", label: "Fechamento" },
-    ],
+    closingSection: "Fechamento",
+    closingItem: "Leitura geral",
     olderSection: "Reports anteriores",
     olderLink: "Piloto inicial",
   },
