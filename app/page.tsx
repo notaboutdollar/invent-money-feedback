@@ -543,7 +543,7 @@ const REPORT_CSS = `
   .report-page .page { grid-template-columns: 240px minmax(0, 1fr); }
 }
 
-.report-page .wrap { max-width: 1200px; padding: 0 var(--edge); }
+.report-page .wrap { max-width: 1400px; padding: 0 var(--edge); }
 .report-page .rule2 { height: 2px; border: 0; margin: 0; background: var(--color-divider); }
 .report-page .rule1 { height: 1px; border: 0; margin: 0; background: var(--color-divider); }
 
@@ -622,7 +622,7 @@ const REPORT_CSS = `
 .report-page .brand-line .label { color: color-mix(in srgb, var(--color-text) 65%, transparent); font-weight: 400; }
 .report-page .display {
   font-family: var(--font-archivo); font-weight: 800;
-  font-size: clamp(44px, 6.4vw, 92px);
+  font-size: clamp(48px, 7.8vw, 120px);
   line-height: 1.06;
   letter-spacing: -0.02em; margin: 0; margin-left: -0.05em;
   text-wrap: balance;
