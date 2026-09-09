@@ -20,10 +20,7 @@ function BarQuestion({ q }: { q: BarQuestionData & { readingLabel: string } }) {
     <section id={`q${q.num}`} className={q.zebra ? "zebra" : ""}>
       <div className="wrap">
         <div className="q-head">
-          <p className="q-num">
-            {q.num}
-            <span className="col">{q.col}</span>
-          </p>
+          <p className="q-num">{q.num}</p>
           <div>
             <h2 className="q-title">{q.title}</h2>
             <p className="q-meta">
@@ -76,10 +73,7 @@ function RatingQuestion({ q }: { q: RatingQuestionData & { readingLabel: string 
     <section id={`q${q.num}`} className={q.zebra ? "zebra" : ""}>
       <div className="wrap">
         <div className="q-head">
-          <p className="q-num">
-            {q.num}
-            <span className="col">{q.col}</span>
-          </p>
+          <p className="q-num">{q.num}</p>
           <div>
             <h2 className="q-title">{q.title}</h2>
             <p className="q-meta">
@@ -139,10 +133,7 @@ function ThemeQuestion({
     <section id={`q${q.num}`} className={q.zebra ? "zebra" : ""}>
       <div className="wrap">
         <div className="q-head">
-          <p className="q-num">
-            {q.num}
-            <span className="col">{q.col}</span>
-          </p>
+          <p className="q-num">{q.num}</p>
           <div>
             <h2 className="q-title">{q.title}</h2>
             <p className="q-meta">
@@ -202,10 +193,7 @@ function SummaryQuestion({ q }: { q: SummaryQuestionData }) {
     <section id={`q${q.num}`} className={q.zebra ? "zebra" : ""}>
       <div className="wrap">
         <div className="q-head">
-          <p className="q-num">
-            {q.num}
-            <span className="col">{q.col}</span>
-          </p>
+          <p className="q-num">{q.num}</p>
           <div>
             <h2 className="q-title">{q.title}</h2>
             <p className="q-meta">
@@ -418,10 +406,7 @@ export default function Page() {
             <section id="destaques">
               <div className="wrap">
                 <div className="q-head">
-                  <p className="q-num">
-                    {t.highlights.num}
-                    <span className="col">{t.highlights.col}</span>
-                  </p>
+                  <p className="q-num">{t.highlights.num}</p>
                   <div>
                     <h2 className="q-title">{t.highlights.title}</h2>
                     <p className="q-meta">
@@ -677,13 +662,12 @@ const REPORT_CSS = `
 .report-page .metric .lbl { font-size: 12px; line-height: 1.35; color: color-mix(in srgb, var(--color-text) 75%, transparent); margin: 0; }
 
 /* Question head */
-.report-page .q-head { display: grid; grid-template-columns: minmax(60px, auto) minmax(0, 1fr); gap: 24px calc(1.5 * var(--leading)); align-items: baseline; margin: 0 0 calc(1.5 * var(--leading)); }
+.report-page .q-head { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 24px calc(1.5 * var(--leading)); align-items: baseline; margin: 0 0 calc(1.5 * var(--leading)); }
 .report-page .q-num { font-family: var(--font-archivo); font-weight: 800; font-size: 13px; color: var(--color-accent); letter-spacing: 0.08em; font-feature-settings: "tnum" 1; margin: 0; }
-.report-page .q-num .col { color: color-mix(in srgb, var(--color-text) 45%, transparent); margin-left: 8px; }
 .report-page .q-title { font-family: var(--font-archivo); font-weight: 800; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.15; letter-spacing: -0.015em; margin: 0 0 var(--half); }
 .report-page .q-meta { display: flex; flex-wrap: wrap; gap: var(--half) var(--leading); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent); }
 .report-page .q-meta .type { color: var(--color-accent-700); font-weight: 800; }
-.report-page .q-body { display: grid; grid-template-columns: minmax(60px, auto) minmax(0, 1fr); gap: 24px calc(1.5 * var(--leading)); align-items: start; }
+.report-page .q-body { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 24px calc(1.5 * var(--leading)); align-items: start; }
 .report-page .q-body .spacer { display: none; }
 @media (min-width: 720px) { .report-page .q-body .spacer { display: block; } }
 
