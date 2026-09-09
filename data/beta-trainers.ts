@@ -273,7 +273,7 @@ const en: Content = {
             id: "Resp. C · day 07",
             device: "iPhone 12",
             quote:
-              "Uploading from iPhone requires loading twice — once to select the video from the gallery and a second time to load into Invent. This is really annoying because it takes long, on Android I tested sending from the Samsung S21 and there's no this \"extra step\" of loading. Also, I couldn't send bigger videos from the iPhone, because in this first loading step there was an error with no explanation — it just went back to the upload screen. I managed to send by uploading the videos to Google Drive, downloading on the computer and sending via site, which is another experience problem — I shouldn't have to download again on the computer if the desktop upload button had a \"pick a file from Drive\" option, like the phone does.",
+              "Uploading from iPhone requires loading twice — once to select the video from the gallery and a second time to load into Invent. This is really annoying because it takes a long time. On Android I tested sending from the Samsung S21 and there's no such \"extra step\" of loading. Also, I couldn't send bigger videos from the iPhone, because in this first loading step there was an error with no explanation — it just went back to the upload screen. I managed to send by uploading the videos to Google Drive, downloading on the computer and sending via site, which is another experience problem — I shouldn't have to download again on the computer if the desktop upload button had a \"pick a file from Drive\" option, like the phone does.",
             impact: "Worked around it",
             frequency: "Sometimes",
           },
