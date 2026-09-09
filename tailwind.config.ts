@@ -10,7 +10,7 @@ const config: Config = {
         accent: "#22c55e",
       },
       fontFamily: {
-        sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Inter", "sans-serif"],
+        sans: ["var(--font-archivo)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Inter", "sans-serif"],
       },
     },
   },

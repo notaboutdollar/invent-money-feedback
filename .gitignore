@@ -8,3 +8,6 @@ build
 *.log
 .vercel
 next-env.d.ts
+
+# Design source files imported from Claude Design (kept locally for reference)
+Landing page resultados Invent Money/
