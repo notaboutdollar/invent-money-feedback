@@ -75,11 +75,11 @@ type Content = {
 const pt: Content = {
   docTitle: "Pulso da Comunidade — Invent Money",
   docDescription:
-    "Feedback de 12 testers da comunidade, 13–14 de setembro de 2026.",
+    "Feedback de 12 testers da comunidade, 12–13 de setembro de 2026.",
   brand: {
     name: "Invent Money",
     role: "Feedback da comunidade",
-    period: "Pulso da comunidade\n13-14/09/2026",
+    period: "Pulso da comunidade\n12-13/09/2026",
   },
   toc: {
     overviewSection: "Panorama",
@@ -107,11 +107,11 @@ const pt: Content = {
     kickerName: "Invent Money",
     kickerLabel: "Feedback aberto da comunidade",
     titleLine1: "Pulso da comunidade",
-    titleAccent: "13 e 14 de setembro",
+    titleAccent: "12 e 13 de setembro",
     titleLine2Suffix: " de 2026.",
     sub: "Resultados do novo formulário de feedback — com perguntas atualizadas — preenchido por 12 testers da comunidade em cerca de 24 horas. A rodada cobre sistema operacional, fluidez do app, erros enfrentados, recomendação e sugestões abertas. Diferente do report anterior, focado nas trainers profissionais contratadas pela NIDO, esta amostra reflete a comunidade mais ampla de usuários do app.",
     metaPeriodK: "Período de coleta",
-    metaPeriodV: "13-14/09/2026",
+    metaPeriodV: "12-13/09/2026",
     metaResponsesK: "Respostas",
     metaResponsesV: "12",
     metaTestersK: "Testers",
@@ -119,8 +119,8 @@ const pt: Content = {
     metaDaysK: "Dias cobertos",
     metaDaysV: "2",
     days: [
-      { day: "Sáb. 13/09", num: "8", unit: "respostas", label: "Dia 1, início da coleta" },
-      { day: "Dom. 14/09", num: "4", unit: "respostas", label: "Dia 2, último dia" },
+      { day: "Sáb. 12/09", num: "8", unit: "respostas", label: "Dia 1, início da coleta" },
+      { day: "Dom. 13/09", num: "4", unit: "respostas", label: "Dia 2, último dia" },
     ],
   },
   panorama: {
@@ -264,11 +264,11 @@ const pt: Content = {
 const en: Content = {
   docTitle: "Community Pulse — Invent Money",
   docDescription:
-    "Feedback from 12 community testers, September 13–14, 2026.",
+    "Feedback from 12 community testers, September 12–13, 2026.",
   brand: {
     name: "Invent Money",
     role: "Community feedback",
-    period: "Community pulse\n09/13-14/2026",
+    period: "Community pulse\n09/12-13/2026",
   },
   toc: {
     overviewSection: "Overview",
@@ -296,11 +296,11 @@ const en: Content = {
     kickerName: "Invent Money",
     kickerLabel: "Open community feedback",
     titleLine1: "Community pulse",
-    titleAccent: "September 13 and 14",
+    titleAccent: "September 12 and 13",
     titleLine2Suffix: ", 2026.",
     sub: "Results from the new feedback form — with updated questions — filled out by 12 community testers over about 24 hours. This round covers operating system, app fluidity, errors faced, recommendation, and open suggestions. Unlike the previous report, focused on the professional trainers hired by NIDO, this sample reflects the broader community of app users.",
     metaPeriodK: "Collection period",
-    metaPeriodV: "09/13-14/2026",
+    metaPeriodV: "09/12-13/2026",
     metaResponsesK: "Responses",
     metaResponsesV: "12",
     metaTestersK: "Testers",
@@ -308,8 +308,8 @@ const en: Content = {
     metaDaysK: "Days covered",
     metaDaysV: "2",
     days: [
-      { day: "Sat. 09/13", num: "8", unit: "responses", label: "Day 1, collection start" },
-      { day: "Sun. 09/14", num: "4", unit: "responses", label: "Day 2, last day" },
+      { day: "Sat. 09/12", num: "8", unit: "responses", label: "Day 1, collection start" },
+      { day: "Sun. 09/13", num: "4", unit: "responses", label: "Day 2, last day" },
     ],
   },
   panorama: {
