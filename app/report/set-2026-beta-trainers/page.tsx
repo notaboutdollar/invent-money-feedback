@@ -6,21 +6,29 @@ import { LangSwitcher } from "@/components/LangSwitcher";
 import {
   BarQuestion,
   RatingQuestion,
+  ThemeQuestion,
   SummaryQuestion,
   REPORT_CSS,
 } from "@/components/ReportLayout";
-import { communityPulseContent } from "@/data/community-pulse";
+import { betaTrainersContent } from "@/data/beta-trainers";
 
 export default function Page() {
   const { lang } = useLang();
-  const t = communityPulseContent[lang];
+  const t = betaTrainersContent[lang];
 
+  // Attach reading label + theme-question labels dynamically per language.
   const readingLabel = lang === "en" ? "Reading" : "Leitura";
+  const impactLabel = lang === "en" ? "Impact" : "Impacto";
+  const frequencyLabel = lang === "en" ? "Frequency" : "Frequência";
+  const latestLabel = lang === "en" ? "← Latest report" : "← Report mais recente";
 
   const q1 = { ...t.q1, readingLabel };
   const q2 = { ...t.q2, readingLabel };
-  const q3 = { ...t.q3, readingLabel };
+  const q3 = { ...t.q3, readingLabel, impactLabel, frequencyLabel };
   const q4 = { ...t.q4, readingLabel };
+  const q5 = { ...t.q5, readingLabel };
+  const q6 = { ...t.q6, readingLabel };
+  const q7 = { ...t.q7, readingLabel };
 
   return (
     <>
@@ -50,6 +58,11 @@ export default function Page() {
               {t.brand.period}
             </p>
 
+            <Link href="/" className="toc-link-older">
+              <span className="n">→</span>
+              <span>{latestLabel}</span>
+            </Link>
+
             <p className="toc-sec">{t.toc.overviewSection}</p>
             <a href="#panorama">
               <span className="n">00</span>
@@ -77,16 +90,13 @@ export default function Page() {
             </a>
 
             <p className="toc-sec">{t.toc.olderSection}</p>
-            {t.toc.olderLinks.map((l, i) => (
-              <Link
-                href={l.href}
-                className="toc-link-older toc-older-item"
-                key={i}
-              >
-                <span className="n">→</span>
-                <span>{l.label}</span>
-              </Link>
-            ))}
+            <Link
+              href="/report/set-2026-piloto-inicial"
+              className="toc-link-older"
+            >
+              <span className="n">→</span>
+              <span>{t.toc.olderLink}</span>
+            </Link>
 
             <div className="toc-lang">
               <LangSwitcher />
@@ -114,6 +124,7 @@ export default function Page() {
                 <h1 className="display">
                   <span className="line">{t.hero.titleLine1}</span>
                   <span className="line">
+                    {lang === "en" ? "of " : "de "}
                     <span className="accent">{t.hero.titleAccent}</span>
                     {t.hero.titleLine2Suffix}
                   </span>
@@ -130,8 +141,8 @@ export default function Page() {
                     <p className="v">{t.hero.metaResponsesV}</p>
                   </div>
                   <div>
-                    <p className="k">{t.hero.metaTestersK}</p>
-                    <p className="v">{t.hero.metaTestersV}</p>
+                    <p className="k">{t.hero.metaTrainersK}</p>
+                    <p className="v">{t.hero.metaTrainersV}</p>
                   </div>
                   <div>
                     <p className="k">{t.hero.metaDaysK}</p>
@@ -225,11 +236,13 @@ export default function Page() {
             </section>
 
             <BarQuestion q={q1} />
-            <RatingQuestion q={q2} />
-            <BarQuestion q={q3} />
-            <RatingQuestion q={q4} />
-            <SummaryQuestion q={t.q5} />
-            <SummaryQuestion q={t.q6} />
+            <BarQuestion q={q2} />
+            <ThemeQuestion q={q3} />
+            <BarQuestion q={q4} />
+            <BarQuestion q={q5} />
+            <RatingQuestion q={q6} />
+            <RatingQuestion q={q7} />
+            <SummaryQuestion q={t.q8} />
 
             <section id="fechamento" className="close-band">
               <div className="wrap">
@@ -246,6 +259,7 @@ export default function Page() {
                 <h2 className="display">
                   <span className="line">{t.closing.titleLine1}</span>{" "}
                   <span className="line">
+                    {lang === "en" ? "The edges " : "As bordas "}
                     <span className="accent">{t.closing.titleAccent}</span>
                     {t.closing.titleLine2Suffix}
                   </span>
