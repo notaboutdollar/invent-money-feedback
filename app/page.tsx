@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useLang } from "@/components/LangProvider";
 import { LangSwitcher } from "@/components/LangSwitcher";
 import {
-  BarQuestion,
   RatingQuestion,
   SummaryQuestion,
   REPORT_CSS,
@@ -19,8 +18,6 @@ export default function Page() {
 
   const q1 = { ...t.q1, readingLabel };
   const q2 = { ...t.q2, readingLabel };
-  const q3 = { ...t.q3, readingLabel };
-  const q4 = { ...t.q4, readingLabel };
 
   return (
     <>
@@ -122,20 +119,20 @@ export default function Page() {
 
                 <div className="meta">
                   <div>
-                    <p className="k">{t.hero.metaPeriodK}</p>
-                    <p className="v">{t.hero.metaPeriodV}</p>
+                    <p className="k">{t.hero.metaWeekK}</p>
+                    <p className="v">{t.hero.metaWeekV}</p>
                   </div>
                   <div>
                     <p className="k">{t.hero.metaResponsesK}</p>
                     <p className="v">{t.hero.metaResponsesV}</p>
                   </div>
                   <div>
-                    <p className="k">{t.hero.metaSegmentsK}</p>
-                    <p className="v">{t.hero.metaSegmentsV}</p>
+                    <p className="k">{t.hero.metaFluidityK}</p>
+                    <p className="v">{t.hero.metaFluidityV}</p>
                   </div>
                   <div>
-                    <p className="k">{t.hero.metaDaysK}</p>
-                    <p className="v">{t.hero.metaDaysV}</p>
+                    <p className="k">{t.hero.metaRecommendationK}</p>
+                    <p className="v">{t.hero.metaRecommendationV}</p>
                   </div>
                 </div>
 
@@ -224,12 +221,10 @@ export default function Page() {
               </div>
             </section>
 
-            <BarQuestion q={q1} />
+            <RatingQuestion q={q1} />
             <RatingQuestion q={q2} />
-            <RatingQuestion q={q3} />
-            <BarQuestion q={q4} />
-            <SummaryQuestion q={t.q5} />
-            <SummaryQuestion q={t.q6} />
+            <SummaryQuestion q={t.q3} />
+            <SummaryQuestion q={t.q4} />
 
             <section id="fechamento" className="close-band">
               <div className="wrap">
