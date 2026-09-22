@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLang } from "@/components/LangProvider";
 import { LangSwitcher } from "@/components/LangSwitcher";
 import {
+  BarQuestion,
   RatingQuestion,
   SummaryQuestion,
   REPORT_CSS,
@@ -18,6 +19,8 @@ export default function Page() {
 
   const q1 = { ...t.q1, readingLabel };
   const q2 = { ...t.q2, readingLabel };
+  const q3 = { ...t.q3, readingLabel };
+  const q4 = { ...t.q4, readingLabel };
 
   return (
     <>
@@ -221,10 +224,13 @@ export default function Page() {
               </div>
             </section>
 
-            <RatingQuestion q={q1} />
+            <BarQuestion q={q1} />
             <RatingQuestion q={q2} />
-            <SummaryQuestion q={t.q3} />
-            <SummaryQuestion q={t.q4} />
+            <RatingQuestion q={q3} />
+            <BarQuestion q={q4} />
+            <SummaryQuestion q={t.q5} />
+            <SummaryQuestion q={t.q6} />
+            <SummaryQuestion q={t.q7} />
 
             <section id="fechamento" className="close-band">
               <div className="wrap">
