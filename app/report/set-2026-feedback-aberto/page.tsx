@@ -9,13 +9,14 @@ import {
   SummaryQuestion,
   REPORT_CSS,
 } from "@/components/ReportLayout";
-import { openFeedbackContent } from "@/data/open-feedback-39";
+import { openFeedbackContent } from "@/data/open-feedback";
 
 export default function Page() {
   const { lang } = useLang();
   const t = openFeedbackContent[lang];
 
   const readingLabel = lang === "en" ? "Reading" : "Leitura";
+  const latestLabel = lang === "en" ? "← Latest report" : "← Report mais recente";
 
   const q1 = { ...t.q1, readingLabel };
   const q2 = { ...t.q2, readingLabel };
@@ -49,6 +50,11 @@ export default function Page() {
             >
               {t.brand.period}
             </p>
+
+            <Link href="/" className="toc-link-older">
+              <span className="n">→</span>
+              <span>{latestLabel}</span>
+            </Link>
 
             <p className="toc-sec">{t.toc.overviewSection}</p>
             <a href="#panorama">
